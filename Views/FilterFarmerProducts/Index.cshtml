@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Jordan_Green._st10083222._PROG7311._POE._Part_2.Models.FarmerProducts>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Filter List</h1>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search"
+    /></p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.ActionLink("Username", "Index")
+            </th>
+            <th>
+                @Html.ActionLink("Types of Products", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Product Name", "Index")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    <a asp-action="Home">Back to List</a>
+</div>

@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <html>
+    <style>
+        .btn-group button {
+            background-color: white; /* White background */
+            border: 2px solid #008CBA;
+            color: black; /* Black text */
+            padding: 70px 70px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            float: left; /* Float the buttons side by side */
+            font-size: 20px;
+            margin: 8px 8px;
+            cursor: pointer;
+        }
+
+        /* Clear floats (clearfix hack) */
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn-group button:not(:last-child) {
+            border-left: none; /* Prevent double borders */
+        }
+
+        /* Add a background color on hover */
+        .btn-group button:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+    <body>
+
+        <h1>Farm Central</h1>
+        <h4>Login As</h4>
+
+        <div class="btn-group">
+            <a href="https://localhost:44337/EmployeeUsers/Login">
+                <button>Employee</button>
+            </a>
+        </div>
+
+        <div class="btn-group">
+            <a href="https://localhost:44337/FarmerUsers/Login">
+                <button>Farmer  </button>
+            </a>
+        </div>
+
+    </body>
+</html>
+</div>

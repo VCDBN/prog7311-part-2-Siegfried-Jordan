@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Jordan_Green._st10083222._PROG7311._POE._Part_2.Models.FarmerProducts>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+<div class="text-center">
+    <html>
+    <style>
+        .btn-group button {
+            background-color: white; /* White background */
+            border: 2px solid #008CBA;
+            color: black; /* Black text */
+            padding: 70px 70px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            float: left; /* Float the buttons side by side */
+            font-size: 20px;
+            margin: 8px 8px;
+            cursor: pointer;
+        }
+
+        /* Clear floats (clearfix hack) */
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn-group button:not(:last-child) {
+            border-left: none; /* Prevent double borders */
+        }
+
+        /* Add a background color on hover */
+        .btn-group button:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+    <body>
+
+        <h1>Farm Central</h1>
+        <h4>Filter or Add Farmer</h4>
+
+        <div class="btn-group">
+            <a href="https://localhost:44337/FilterFarmerProducts/Index">
+                <button>View Products</button>
+            </a>
+        </div>
+
+        <div class="btn-group">
+            <a href="https://localhost:44337/EmployeeAddFarmerUsers/Create">
+                <button>Add Farmer  </button>
+            </a>
+        </div>
+
+    </body>
+</html>
+</div>
